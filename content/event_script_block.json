@@ -1,0 +1,165 @@
+{
+  "이동/대화": [
+    "#fff9c4",
+    {
+      "<advanceMove>/n/c FNPCName/이 /c BoolLoop/ 움직임/n/f [['위로','아래로','왼쪽으로','오른쪽으로'],5,'칸 또는 밀리초',['이동','정지']]": "advancedMove <0> <1:BoolLoop> actormove_transform(<2~>)",
+      "<advanceMove> 이동 중지": "stopAdvancedMoves",
+      "c FNPCName/(이)가/n/c [위로,아래로,왼쪽으로,오른쪽으로]/ /e/칸 이동하고/c Direction/바라봄/n/다음 줄 즉시 실행? /c ['true','false']": "move <0> generalmove_transform('<1>',<2>,'<3>') <4>",
+      "c FNPCName/이 /c Direction/을 바라본다/n/다음 블록 즉시 실행 여부/c ['true','false']": "faceDirection <0> <1:Direction> <2>",
+      "일반 대화 상자 표시/n/e40": "message addeventdial('<0>')",
+      "c NPCName/이 말한다/n/b open_text": "speak <0> addeventdial('<1>')",
+      "간단한 선택지와 /c NPCName/의 반응/n/f ['선택: ',20,', 반응: ',open_text_editor]": "create_questionnull('<0>',<1~>)",
+      "선택지를 띄운다(NPC반응동일)/n/f ['답변: ',40]": "question null add_Collin(<0~>)",
+      "quickQuestion 선택지를 띄운다(NPC반응은 달라야 하지만 흐름은 같은 경우)/n/f ['답변: ',40]/n/이후 답변(선택지) 개수만큼 quickQuestion반응 블록을 추가하세요": "quickQuestion '#'+'#'.join(<0~>)",
+      "밑으로 quickQuestion n번째 반응": "(break)",
+      "quickQuestion 반응들 모두 입력 완료": "(breakEND)",
+      "e/번째(0부터 시작) 선택지를 선택하면 스페셜이벤트변수(포크) 참으로 설정:/n/f ['답변: ',40]": "question fork<0> add_Collin(<1~>)",
+      "c NPCName/의 머리 위에 말풍선/n/e30/ 대사 추가": "textAboveHead <0> message addeventdial('<1>')",
+      "c FNPCName/머리 위에 /c Emote/이모지 표시하고 기다리기": "emote <0> <1:Emote> ",
+      "c FNPCName/머리 위에 /c Emote/이모지 표시": "emote <0> <1:Emote> true",
+      "c FNPCName/의 속도 일시적으로 /e/(으)로 바꾸기 (기본 3)": "speed <0> <1>",
+      "이벤트가 끝날 때까지 /c FNPCName/가 벽 충돌무시": "ignoreCollisions <0>",
+      "c FNPCName/이 X:/e/Y:/e/로 워프한다(사라진다)/n/다음 명령줄 바로 실행?/c ['false','true']": "warp <0> <1> <2> <3>"
+    }
+  ],
+  "모양": [
+    "#EDE7C2",
+    {
+      "좌우반전/c ['false','true']/반복여부/c ['false','true']/프레임간격/e/밀리초의/n/c NPCName/ 애니메이션/e20": "animate <3> <0> <1> <2> <4>",
+      "좌우반전/c ['false','true']/반복여부/c ['false','true']/프레임간격/e/밀리초의/n/농부 애니메이션/b10 spriteaction_manager(None, True, True)": "animate farmer <0> <1> <2> <3>",
+      "좌우반전/c ['false','true']/반복여부/c ['false','true']/프레임간격/e/밀리초의/n/해당 NPC 애니메이션/b10 spriteaction_manager(None, True)": "animate load_unique_id() <0> <1> <2> <3>",
+      "c FNPCName/ 애니메이션 중지": "stopAnimation <0>",
+      "c NPCName/초상화 유형 원래대로 바꾸기": "changePortrait <0>",
+      "c NPCName/초상화 유형 /c ['beach']/(으)로 바꾸기/n/사용자 지정 카테고리 입력 가능": "changePortrait <0> <1>",
+      "c NPCName/도트 유형 원래대로 바꾸기": "changeSprite <0>",
+      "c NPCName/도트 유형 /c ['beach']/(으)로 바꾸기/n/사용자 지정 카테고리 입력 가능": "changeSprite <0> <1>",
+      "실제 NPC에 영향을 주지 않는 임시 /c NPCName/ 사용/n 표시이름이나 초상화를 일시적으로 변경할 수 있습니다": "replaceWithClone <0>",
+      "c NPCName/ 스프라이트의 /e/칸 아래 이미지 표시/n/이벤트의 나머지 기간 동안 지속": "changeYSourceRectOffset <0> <1>*32",
+      "c FNPCName/의 위치를 x:/e/y:/e/만큼 오프셋/n/다음 줄 즉시 실행? /c ['true','false']": "positionOffset <0> <1> <2> <3>",
+      "농부 눈 /c FarmerEye": "eyes <0:FarmerEye> -1000",
+      "c FNPCName/을 /e/밀리초 동안 흔든다": "shake <0> <1>",
+      "c FNPCName/의 그림자를 숨긴다": "hideShadow <0> true",
+      "c FNPCName/ 그림자 숨기기 해제": "hideShadow <0> false",
+      "c FNPCName/가 수영한다": "swimming <0>",
+      "c FNPCName/가 수영을 그만한다": "stopSwimming <0>",
+      "c FNPCName/ 점프": "jump <0>",
+      "플레이어가 떤다": "startJittering",
+      "플레이어 떨림 중지": "stopJittering",
+      "플레이어가 달린다": "setRunning",
+      "플레이어 달리기 중지": "stopRunning",
+      "농부가 /c Object/를 먹는다": "farmerEat <0:Object>",
+      "c NPCName/이 공중에 /c Concessions/를 던진다": "tossConcession <0> <1:Concessions>",
+      "c Awardable/을 농부 머리 위에 표시/n/인벤토리에 추가되지 않습니다": "itemAboveHead <0>/pause 3300"
+    }
+  ],
+  "흐름제어": [
+    "#c8e6c9",
+    {
+      "동시에 실행하는 이벤트 블록 <시작>": "beginSimultaneousCommand",
+      "동시에 실행하는 이벤트 블록 <끝>": "endSimultaneousCommand",
+      "e/밀리초 동안 게임 일시중지": "pause <0>",
+      "c FNPCName/가 멈출 때까지 기다린다": "proceedPosition <0>",
+      "모든 액터가 움직임을 멈출 때 까지 기다린다": "waitForAllStationary",
+      "모두 정지": "halt",
+      "다른 플레이어를 기다린다": "waitForOtherPlayers",
+      "스페셜이벤트변수(포크)가 참이라면/b10 open_event_editor(True)/명령 실행/n/이때, 남아있는 명령줄은 실행하지 않습니다": "fork <0>",
+      "<포크> /h create_event_combo(row, tp='q')/라고 답한 적 있다면/n/b10 open_event_editor(True)/명령 실행/n/이때, 남아있는 명령줄은 실행하지 않습니다": "fork <0:user_question> <1>",
+      "<포크> letterID:/e/가 활성화 상태라면/b10 open_event_editor(True)/명령 실행/n/이때, 남아있는 명령줄은 실행하지 않습니다": "fork <0> <1>",
+      "스페셜이벤트변수(포크) 거짓으로 지정": "resetVariable",
+      "h create_event_combo(row)/이벤트 본 것으로 침/n/상호 배타적인 이벤트가 일어나지 않도록 할 수 있습니다": "eventSeen <0:user_event> true",
+      "h create_event_combo(row)/이벤트 안 본 것으로 침/n/반복 가능한 이벤트를 만드는 데 유용합니다": "eventSeen <0:user_event> false",
+      "유저 답변 목록에서 /h create_event_combo(row, tp='q')/제거": "questionAnswered <0:user_question> false",
+      "유저 답변 목록에 /h create_event_combo(row, tp='q')/추가": "questionAnswered <0:user_question> true",
+      "이 이벤트 건너뛰기 허용": "skippable",
+      "같은 위치의/h create_event_combo(row, tp='e')/로 이벤트 변경": "switchEvent <0:user_event>"
+    }
+  ],
+  "맵": [
+    "#bbdefb",
+    {
+      "X:/e/Y:/e/에 제작가능아이템 /h create_image_combo(win, row, tp='c')/ 추가": "addBigProp <0> <1> <2>",
+      "X:/e/Y:/e/에 /e/만큼 빛나는 임시 스프라이트/e/추가": "addLantern <3> <0> <1> <2>",
+      "X:/e/Y:/e/에 /c Object/추가 (레이어/e/)/n/레이어는 음수일 수 있습니다.(보통 -1)/n/0보다 큰 숫자는 NPC 위에 개체를 그립니다.": "addObject <0> <1> <2:Object> <3>",
+      "c location_name/으로 위치 변경": "changeLocation <0>",
+      "임시로 장소를 /c location_name/로 변경": "changeToTemporaryMap <0>",
+      "x:/e/y:/e/, 영역 x:/e/y:/e/에 존재하는 개체들을 숨긴다/n/(나무 등 잡동사니 정리)": "makeInvisible <0> <1> <2> <3>",
+      "x:/e/y:/e/의 아이템 제거": "removeObject <0> <1>",
+      "X:/e/Y:/e/에 가로/e/ 세로/e/ 방향/c Direction/의/n/일시적 /c Actor/ 추가": "addTemporaryActor <5> <2> <3> <0> <1> <4:Direction>",
+      "x:/e/y:/e/의 임시 스프라이트 제거": "removeSprite <0> <1>",
+      "모든 임시 스프라이트 제거": "removeTemporarySprites"
+    }
+  ],
+  "연출": [
+    "#e1bee7",
+    {
+      "X:/e/Y:/e/로 카메라 이동": "viewport <0> <1>",
+      "X:/e/Y:/e/방향(및 속도)로 /e/밀리초동안 카메라 이동": "viewport move <0> <1> <2>",
+      "검정으로 페이드 아웃, 그리고 카메라 -1000 이동": "fade/viewport -1000 -1000",
+      "검정에서 페이드 인/n/보통, 카메라를 -1000,-1000으로 하여 까만 상태에서 사용합니다": "fade unfade",
+      "화면이 빛나고 R:/e/G:/e/B:/e/로 페이드 아웃": "glow <0> <1> <2> false",
+      "화면이 빛나고 R:/e/G:/e/B:/e/로 페이드 인, [화면 빛남 중지]까지 색 유지": "glow <0> <1> <2> true",
+      "화면 빛남 중지": "stopGlowing",
+      "화면이 잠시 밝기/e/%로 하얗게 깜빡인다": "screenFlash '.'+'<0>'",
+      "화면이 잠시 /e/초 동안 흰색으로 깜빡인다": "screenFlash <0>",
+      "주변광색 R:/e/G:/e/B:/e/로 설정": "ambientLight <0> <1> <2>"
+    }
+  ],
+  "사운드": [
+    "#ffe0b2",
+    {
+      "h create_sound_combo(win, row, tp='b')/를 재생한다": "playMusic <0:music_data[0]>",
+      "h create_sound_combo(win, row, 's')/ 효과음 재생": "playSound <0:sound_data[0]>",
+      "재생중인 음악 중지": "stopMusic",
+      "h create_sound_combo(win, row, 's')/ 효과음 중지": "stopSound <0:sound_data[0]>",
+      "h create_sound_combo(win, row, 's')/ 효과음/n/끝날 때까지 기다렸다가 중지": "stopSound <0:sound_data[0]> false"
+    }
+  ],
+  "시스템": [
+    "#b2dfdb",
+    {
+      "사용자가 x:/e/Y:/e/를 클릭한 것 처럼 동작/n/문열기, 선물주기, 대화 등 가능": "doAction <0> <1>",
+      "c NPCName/의 표시이름 /e/로 변경": "changeName <0> <1>",
+      "c NPCName/의 호감도P /e/추가 (1하트=250P)": "friendship <0> <1>",
+      "c CookingRecepies/ 요리 레시피 추가": "addCookingRecipe <0:CookingRecepies>",
+      "c CraftingRecepies/ 제작 레시피 추가": "addCraftingRecipe <0:CraftingRecepies>",
+      "인벤토리에 /c Object/를 /e/개 추가": "addItem <0:Object> <1>",
+      "인벤토리에서 /c Object/을(를) /e/개 제거": "removeItem <0:Object> <1>",
+      "c Awardable/을 플레이어에게 수여": "awardFestivalPrize <0>/pause 500",
+      "플레이어가 녹슨 열쇠를 받는다": "rustyKey",
+      "돈 /e/의 변화": "money <0>",
+      "퀘스트 ID:/e/추가": "addQuest <0>",
+      "퀘스트 로그에서 ID:/e/퀘스트 제거": "removeQuest <0>",
+      "e/일 동안 /e/대화주제(영어+숫자) 활성화": "addConversationTopic <1> <0>",
+      "ID:/e/ 편지를 내일 받게 한다": "mail <0>",
+      "ID:/e/ 편지를 즉시 편지함에 추가": "mailToday <0>",
+      "받은 편지 중 ID:/e/ 제거": "mailReceived <0> false",
+      "받은 편지 중 ID:/e/ 추가": "mailReceived <0> true",
+      "멀티 플레이어 모두가 볼 수 있는 이벤트": "broadcastEvent",
+      "하비가 나타나고 돈 잃기": "hospitaldeath",
+      "하비가 나타나 돈,아이템을 잃는다": "minedeath"
+    }
+  ],
+  "종료": [
+    "#f8bbd0",
+    {
+      "이벤트 종료": "end",
+      "이벤트 종료 후 침대 워프": "end bed",
+      "이벤트 종료 후 오늘의 /c NPCName/ 대사 변경/n/b open_text": "end dialogue <0> \"<1>\"",
+      "이벤트 종료 후 현재 위치의 첫번째 워프 지점 이동/n/오늘의 /c NPCName/ 대사 변경/n/b open_text": "end dialogueWarpOut <0> \"<1>\"",
+      "이벤트 종료 후 하루 동안 /c NPCName/가 사라짐": "end invisible <0>",
+      "이벤트 종료 후 하루 동안 /c NPCName/가 사라짐/n/그리고 현재 위치의 첫번째 워프 지점 이동": "end invisibleWarpOut <0>",
+      "이벤트 종료 후 날짜 종료": "end newDay",
+      "이벤트 종료 후 x:/e/y:/e/로 워프": "end position <0> <1>",
+      "이벤트 종료 후 현재 위치의 첫번째 워프 지점 이동": "end warpOut"
+    }
+  ],
+  "메뉴": [
+    "#8f8f8f",
+    {
+      "동물 이름 지정 메뉴 표시": "animalNaming",
+      "반려동물 입양에 대한 질문 트리거": "catQuestion",
+      "농장 동굴 유형에 대한 질문 트리거": "cave",
+      "튜토리얼 메뉴 표시": "tutorialMenu"
+    }
+  ]
+}

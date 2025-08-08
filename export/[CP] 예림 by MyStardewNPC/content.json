@@ -1,0 +1,43 @@
+{
+    "Format": "2.0.0",
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "YYL": {
+                    "BirthDay": 1,
+                    "CanBeRomanced": true,
+                    "Gender": "Female",
+                    "Age": "Adult",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Neutral",
+                    "Optimism": "Neutral",
+                    "BirthSeason": "spring",
+                    "HomeRegion": "Town",
+                    "IsDarkSkinned": false,
+                    "Home": [
+                        {
+                            "Id": "Default",
+                            "Condition": null,
+                            "Location": "Desert",
+                            "Tile": {
+                                "X": 12,
+                                "Y": 3
+                            },
+                            "Direction": "up"
+                        }
+                    ],
+                    "DisplayName": "예림"
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "YYL": "이거 진짜 좋다! @, 너가 최고야!#$q 63676/63677 title_old#$1#$r 63676 200 title_yes#응#$r 63677 -200 title_no#아니//오. 나 지금 배고픈 거 어떻게 알았어? 맛있겠다!//...응? 왜?//더러워!//선물이구나? 고마워.//"
+            }
+        }
+    ]
+}

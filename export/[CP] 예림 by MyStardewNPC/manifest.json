@@ -1,0 +1,10 @@
+{
+    "Name": "[CP] 예림 by MyStardewNPC",
+    "Author": "MyStardewNPC",
+    "Version": "1.0.0",
+    "Description": "예림 캐릭터를 추가하는 스타듀밸리 Content Patcher 모드입니다.",
+    "UniqueID": "20250808_163436.customnpc",
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}
