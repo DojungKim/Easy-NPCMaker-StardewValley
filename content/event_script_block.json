@@ -25,9 +25,9 @@
   "모양": [
     "#EDE7C2",
     {
-      "좌우반전/c ['false','true']/반복여부/c ['false','true']/프레임간격/e/밀리초의/n/c NPCName/ 애니메이션/e20": "animate <3> <0> <1> <2> <4>",
       "좌우반전/c ['false','true']/반복여부/c ['false','true']/프레임간격/e/밀리초의/n/농부 애니메이션/b10 spriteaction_manager(None, True, True)": "animate farmer <0> <1> <2> <3>",
       "좌우반전/c ['false','true']/반복여부/c ['false','true']/프레임간격/e/밀리초의/n/해당 NPC 애니메이션/b10 spriteaction_manager(None, True)": "animate load_unique_id() <0> <1> <2> <3>",
+      "좌우반전/c ['false','true']/반복여부/c ['false','true']/프레임간격/e/밀리초의/n/c NPCName/ 애니메이션/e20": "animate <3> <0> <1> <2> <4>",
       "c FNPCName/ 애니메이션 중지": "stopAnimation <0>",
       "c NPCName/초상화 유형 원래대로 바꾸기": "changePortrait <0>",
       "c NPCName/초상화 유형 /c ['beach']/(으)로 바꾸기/n/사용자 지정 카테고리 입력 가능": "changePortrait <0> <1>",
